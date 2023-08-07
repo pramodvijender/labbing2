@@ -1,7 +1,7 @@
 FROM ubuntu:20.04
 RUN apt-get update && apt-get install -y wget
 RUN apt-get update && apt-get install -y python3.9 python3.9-dev
-run apt-get install -y python3-pip
+RUN apt-get install -y python3-pip
 ENV GECKODRIVER_VERSION=v0.33.0
 RUN wget https://github.com/mozilla/geckodriver/releases/download/$GECKODRIVER_VERSION/geckodriver-$GECKO>
 RUN tar -zxf geckodriver-$GECKODRIVER_VERSION-linux64.tar.gz -C /usr/local/bin
